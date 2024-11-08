@@ -1,25 +1,20 @@
-matrix = [
-    [1,2,3],
-    [4,5,6],
-    [7,11,9]
-]
+matrix = [[1,2,3],
+        [4,5,7],
+        [7,8,9]]
 
-def isprime (num):
-    count = 2
-    for i in range(n - 1):
-        if n % count == 0:
+def isPrime(n):
+    for i in range(2, n - 1):
+        if n % i == 1:
             return True
         else:
             return False
 
-
-def count (matrix):
-    result = []
+def sumValues(matrix):
+    result = 0
     for x in range(len(matrix)):
         for y in range(len(matrix[x])):
-            num = x + y
-            if num % 2 == 1:
-                result.append(matrix[x][y])
+            if (y + x)% 2 == 1 and isPrime(matrix[x][y]) == True:
+                result += (matrix[x][y])
     return result
 
-print(count (matrix))
+print(sumValues(matrix))
