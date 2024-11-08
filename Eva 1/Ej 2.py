@@ -1,19 +1,19 @@
-print('Elija su numero de sublistas')
-lista = []
-cantlist = int(input())
+print('Ingrese cantidad de listas')
+cantList = int(input())
+finalList = []
 
-def lists (cantlist, lista):
-    for i in range(cantlist):
-        print(f'Selecione los numeros de la sublista {i + 1}')
-        sublist = []
+def createList(cantList, finalList):
+    for i in range(cantList):
+        subList= []
+        print(f'Numeros de la lista {i +1}')
         while True:
             num = int(input())
             if num == -1:
-                lista.append(sublist)
-                i += 1
+                finalList.append(subList)
                 break
             else:
-                sublist.append(num)
-    return lista
+                subList.append(num)
+    return finalList
 
-print(lista)
+
+print(createList(cantList, finalList))
