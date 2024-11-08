@@ -1,11 +1,12 @@
-lista1 = [7,8,9,10]
-lista2 = [1,2,3,4,7,9]
-result = []
-def complists (lista1, lista2):
-    for number1 in lista1:
-        for number2 in lista2:
-            if number1 == number2:
-                result.append(number1)
-    return result
+lista1 = [1, 2, 3 ,4]
+lista2 = [3, 4, 5, 6]
 
-print(complists (lista1, lista2))
+def intersect(lista1, lista2):
+    result = []
+    for i in lista1:
+        for j in lista2:
+            if j == i and j not in result:
+                result.append(j)
+    return result
+print('El Resultado es:')
+print(intersect(lista1, lista2))
